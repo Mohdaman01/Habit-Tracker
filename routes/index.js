@@ -1,8 +1,11 @@
 const express = require('express');
-const Router = express.Router();
 
-Router.get('/',(req,res)=>{
-    res.send('<h1>Server is up and running! </h1>');
-})
+const router = express.Router();
+const homeController = require('../controllers/home_controller');
 
-module.exports = Router;
+router.get('/', homeController.home);
+
+router.use('/habit', require('./habit'));
+
+
+module.exports = router;
