@@ -1,6 +1,6 @@
 // importing the packages
 const express = require('express');
-const port = 9000;
+const port = 8000;
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
